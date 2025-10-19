@@ -1,4 +1,3 @@
--- Recreate table each startup: drop then create
 DROP TABLE IF EXISTS accounts;
 
 CREATE TABLE accounts (

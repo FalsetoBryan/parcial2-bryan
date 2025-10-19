@@ -1,20 +1,12 @@
 {
   "info": {
-    "name": "Parcialdos API",
-    "_postman_id": "b6f9c1a8-0000-4d3a-9c1a-000000000000",
-    "description": "Colección Postman para la API Parcialdos - Gestión de Cuentas Bancarias",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    "name": "Parcial2 Bryan morelos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Colecci\u00f3n para probar la API Parcialdos"
   },
-  "variable": [
-    {
-      "key": "baseUrl",
-      "value": "http://localhost:8080",
-      "type": "string"
-    }
-  ],
   "item": [
     {
-      "name": "Crear cuenta",
+      "name": "Create Account",
       "request": {
         "method": "POST",
         "header": [
@@ -25,13 +17,15 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"numeroCuenta\": \"ACC2001\",\n  \"dueno\": \"María\",\n  \"balanceActual\": 1200.00\n}"
+          "raw": "{\\n  \"numeroCuenta\": \"ACC2001\",\\n  \"dueno\": \"Felipe\",\\n  \"balanceActual\": 1200.50\\n}"
         },
         "url": {
-          "raw": "{{baseUrl}}/api/accounts",
+          "raw": "http://localhost:8080/api/accounts",
+          "protocol": "http",
           "host": [
-            "{{baseUrl}}"
+            "localhost"
           ],
+          "port": "8080",
           "path": [
             "api",
             "accounts"
@@ -40,14 +34,16 @@
       }
     },
     {
-      "name": "Listar cuentas",
+      "name": "Get All Accounts",
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/accounts",
+          "raw": "http://localhost:8080/api/accounts",
+          "protocol": "http",
           "host": [
-            "{{baseUrl}}"
+            "localhost"
           ],
+          "port": "8080",
           "path": [
             "api",
             "accounts"
@@ -56,14 +52,16 @@
       }
     },
     {
-      "name": "Obtener cuenta por ID",
+      "name": "Get Account By Id",
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/accounts/1",
+          "raw": "http://localhost:8080/api/accounts/1",
+          "protocol": "http",
           "host": [
-            "{{baseUrl}}"
+            "localhost"
           ],
+          "port": "8080",
           "path": [
             "api",
             "accounts",
@@ -73,7 +71,7 @@
       }
     },
     {
-      "name": "Actualizar balance (solo balanceActual)",
+      "name": "Update Balance",
       "request": {
         "method": "PUT",
         "header": [
@@ -84,13 +82,15 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"balanceActual\": 999.99\n}"
+          "raw": "{\\n  \"balanceActual\": 999.99\\n}"
         },
         "url": {
-          "raw": "{{baseUrl}}/api/accounts/1",
+          "raw": "http://localhost:8080/api/accounts/1",
+          "protocol": "http",
           "host": [
-            "{{baseUrl}}"
+            "localhost"
           ],
+          "port": "8080",
           "path": [
             "api",
             "accounts",
@@ -100,14 +100,16 @@
       }
     },
     {
-      "name": "Eliminar cuenta",
+      "name": "Delete Account",
       "request": {
         "method": "DELETE",
         "url": {
-          "raw": "{{baseUrl}}/api/accounts/1",
+          "raw": "http://localhost:8080/api/accounts/1",
+          "protocol": "http",
           "host": [
-            "{{baseUrl}}"
+            "localhost"
           ],
+          "port": "8080",
           "path": [
             "api",
             "accounts",
@@ -117,14 +119,16 @@
       }
     },
     {
-      "name": "Buscar por numeroCuenta (dueno + balance)",
+      "name": "Find By Account Number",
       "request": {
         "method": "GET",
         "url": {
-          "raw": "{{baseUrl}}/api/accounts/by-number/ACC1001",
+          "raw": "http://localhost:8080/api/accounts/by-number/ACC1001",
+          "protocol": "http",
           "host": [
-            "{{baseUrl}}"
+            "localhost"
           ],
+          "port": "8080",
           "path": [
             "api",
             "accounts",
@@ -136,3 +140,5 @@
     }
   ]
 }
+
+

@@ -3,6 +3,8 @@ package com.parcial.dos.parcialdos.account.dto;
 import java.math.BigDecimal;
 
 public class AccountOwnerBalanceDTO {
+    private String dueno;
+    private BigDecimal balanceActual;
 
     public AccountOwnerBalanceDTO() {}
 
@@ -10,4 +12,11 @@ public class AccountOwnerBalanceDTO {
         this.dueno = dueno;
         this.balanceActual = balanceActual;
     }
+
+    // Getters y setters
+    public String getDueno() { return dueno; }
+    public void setDueno(String dueno) { this.dueno = dueno; }
+
+    public BigDecimal getBalanceActual() { return balanceActual; }
+    public void setBalanceActual(BigDecimal balanceActual) { this.balanceActual = balanceActual; }
 }
